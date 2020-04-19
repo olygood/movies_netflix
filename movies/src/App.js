@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from './components/header/Header'
-import MovieDetails from './components/movie-details/MovieDetails'
 import MovieList from './components/movie-list/MovieList';
+import MovieDetails from './components/movie-details/MovieDetails'
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <div className="d-flex flex-row">
-      <MovieList />
-      <MovieDetails />
-     
+
+
+class App extends Component {
+  render(){
+    return (
+      <div className="App d-flex flex-column">
+        <Header />
+        <div className="d-flex flex-row flex-fill pt-4">
+        <MovieList />
+        <MovieDetails />
+       
+        </div>
+       
       </div>
-     
-    </div>
-  );
+    );
+  }
+
 }
 
 export default App;
